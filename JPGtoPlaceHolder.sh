@@ -11,16 +11,16 @@ for file in "$INPUT_DIR"/*.jpg; do
   echo "Traitement de l'image : $file"
 
   # Placeholder petit (320px)
-  magick "$file" -resize 320 -quality 100 "$filename-placeholder-small.jpg"  # Petit en JPG
+  magick "$file" -resize 320 -quality 100 "$filename-320.jpg"  # Petit en JPG
 
   # Placeholder moyen (640px)
-  magick "$file" -resize 640 -quality 100 "$filename-placeholder-medium.jpg"  # Moyen en JPG
+  magick "$file" -resize 640 -quality 100 "$filename-640.jpg"  # Moyen en JPG
 
   # Placeholder large (1024px)
-  magick "$file" -resize 1024 -quality 100 "$filename-placeholder-large.jpg"  # Large en JPG
+  magick "$file" -resize 1024 -quality 100 "$filename-1024.jpg"  # Large en JPG
 
   # Placeholder très grand (1920px)
-  magick "$file" -resize 1920 -quality 100 "$filename-placeholder-xlarge.jpg"  # Très grand en JPG
+  magick "$file" -resize 1920 -quality 100 "$filename-1920.jpg"  # Très grand en JPG
 
   echo "4 versions de l'image générées pour $file (4 tailles en JPG)"
 done
